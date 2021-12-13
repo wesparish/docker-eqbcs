@@ -6,10 +6,9 @@ RUN useradd -u 1000 eqbcs && \
     chown 1000:1000 /eqbcs && \
     chmod +x /eqbcs
 
-ENV EQBCS_PORT=2112 \
-    EQBCS_ADDR=0.0.0.0
-
 USER eqbcs
+
+EXPOSE 2112
 
 #Usage: eqbcs [options]
 #  Options are as follows:
@@ -17,4 +16,4 @@ USER eqbcs
 #  -i <addr>     IP Address to bind to
 #  -l <file>     Output to logfile rather than STDOUT
 #  -d            Run as daemon (UNIX only)
-CMD ["sh", "-c", "/eqbcs -p ${EQBCS_PORT} -i ${EQBCS_ADDR}"]
+CMD ["sh", "-c", "/eqbcs"]
