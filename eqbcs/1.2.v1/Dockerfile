@@ -17,4 +17,4 @@ USER eqbcs
 #  -i <addr>     IP Address to bind to
 #  -l <file>     Output to logfile rather than STDOUT
 #  -d            Run as daemon (UNIX only)
-CMD [ '/bin/sh', '-c', '/eqbcs -p ${EQBCS_PORT} -i ${EQBCS_ADDR}' ]
+CMD ["sh", "-c", "/eqbcs -p ${EQBCS_PORT} -i ${EQBCS_ADDR}"]
